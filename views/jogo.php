@@ -16,7 +16,7 @@
 
     <div class="content">
 
-        <img src="views/pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
+        <img src="pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
         <br><br>
 
         <!-- Mostrando a resposta -->
