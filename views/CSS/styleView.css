@@ -3,42 +3,110 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante preenchimento total */
 }
-/* Estilo dos botões de navegação com o tema JoJo */
-.btn-jojo {
-    padding: 12px 30px; 
-    font-size: 18px; 
-    font-weight: bold; 
-    text-transform: uppercase;
-    color: #f0e5ff; 
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
-    border: 2px solid #ff00ff; 
+
+/* Aplicando um leve desfoque */
+.blur-overlay {
+    backdrop-filter: blur(4px); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+/* Container centralizado */
+.container {
+    width: 95%; /* Largura adaptável */
+    max-width: 1600px; /* Limita a largura máxima */
+    margin: auto;
+    background-color: rgba(20, 20, 30, 0.95); /* Fundo igual ao da tabela */
+    padding: 20px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+}
+
+/* Card */
+.card {
+    background-color: rgba(20, 20, 30, 0.95); /* Mesma cor da tabela */
+    border: none; /* Remove bordas do card */
+}
+
+/* Card-header */
+.card-header {
+    background-color: rgba(20, 20, 30, 0.95); /* Mesma cor da tabela */
+    padding: 15px;
+    border-bottom: 2px solid #8000ff; /* Linha roxa */
+}
+
+h4 {
+    font-size: 30px;
+    color: #fff; /* Define o texto em preto */
+    font-weight: bold;
+    text-align: 50%;
+}
+
+/* Estilo geral da tabela */
+.table {
+    width: 90%; /* Largura ajustável */
+    max-width: 1200px; /* Máxima largura */
+    border-collapse: collapse;
+    margin: 20px auto; /* Centraliza na tela */
+    font-family: "JoJoFont", sans-serif;
+    background-color: rgba(20, 20, 30, 0.95);
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
-    cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+    overflow: hidden;
 }
 
-.btn-jojo:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8); 
-    border-color: #ff007f; 
-    color: #fff; 
+/* Torna a tabela responsiva */
+.table-responsive {
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    margin: 0 auto; /* Centraliza o container */
 }
 
-.btn-jojo:active {
-    background: #6a0dad; 
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); 
-    border-color: #ff007f; 
-    color: #e0d3f8; 
+/* Cabeçalho da tabela */
+.table thead {
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
-/* Estilo para a tabela */
-.table-bordered {
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro para a tabela */
-    color: #E0E0E0; /* Texto claro */
-    border-radius: 8px;
-    border: 2px solid #8000ff; /* Borda roxa */
-    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5); /* Sombra vibrante */
+
+.table thead th {
+    padding: 10px 5px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Estilo das células */
+.table tbody td {
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px; /* Fonte menor para caber mais dados */
+    font-weight: bold;
+    border: 1px solid rgba(255, 0, 127, 0.3); /* Borda */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #E0E0E0;
+    transition: background-color 0.3s ease, color 0.3s ease;    
+}
+
+/* Reduz as imagens na tabela */
+.table tbody td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border: 2px solid #ff00ff;
 }
 
 /* Estilo para os cabeçalhos da tabela */
@@ -59,6 +127,7 @@ td {
     font-weight: normal;
     padding: 10px 15px;
     text-align: center;
+    vertical-align: middle;
     border: 2px solid #8000ff; /* Borda roxa */
     background-color: rgba(20, 20, 30, 0.9); /* Fundo escuro nas células */
     color: #e0e0e0;
@@ -73,36 +142,60 @@ td img {
     border: 2px solid #ff00ff;
 }
 
-/* Estilo para a linha de "Nenhum stand encontrado" */
-.table tbody td {
-    text-align: center;
-    font-style: italic;
-    color: #ff007f;
-}
-
-/* Estilo para o botão de adicionar */
-.btn-primary {
-    background-color: #6a0dad; /* Cor roxa */
-    border-color: #9b30b2; /* Borda mais clara */
+.btn-warning {
+    padding: 12px 30px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 12px 25px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    border: 2px solid #ff00ff; /* Borda roxa */
+    color: #fff;
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
     transition: all 0.3s ease;
 }
 
-/* Efeito de hover no botão de adicionar */
-.btn-primary:hover {
-    background-color: #9b30b2; /* Cor roxa mais clara */
-    border-color: #ff00ff; /* Borda vibrante */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+/* Efeito de hover nos botões */
+.btn-warning:hover {
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
+    border-color: #ff007f; /* Borda mais vibrante */
 }
 
-/* Efeito de clique no botão de adicionar */
-.btn-primary:active {
-    background-color: #8000ff; /* Cor mais escura */
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
-    border-color: #ff007f;
+/* Efeito de clique nos botões */
+.btn-warning:active {
+    background: #6a0dad; /* Cor roxa mais escura */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    border-color: #ff007f; /* Borda mais escura */
+    color: #e0d3f8; /* Texto mais claro */
+}
+
+/* Estilo para o botão de edição */
+.btn-edit {
+    background-color: #49885D;
+    color: #fff; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.btn-edit:hover {
+    background-color: #70b88f;
+    color: #f8f9fa; /* Texto branco mais claro */
+}
+
+/* Estilo para o botão de exclusão */
+.btn-delete {
+    background-color: #952F58;
+    color: #fff; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.btn-delete:hover {
+    background-color: #c96f8f;
+    color: #f8f9fa; /* Texto branco mais claro */
 }

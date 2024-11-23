@@ -14,24 +14,24 @@
     <title>Stands</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../CSS/styleView.css">
+    <link rel="stylesheet" href="../CSS/styleView.css?v=<?php echo time(); ?>">
   </head>
   <body>
+    <div class="blur-overlay"></div>
     <div class="container mt-4">
     <div class="col-4">
-      <a href="../../index.php" class="btn btn-jojo btn-lg me-3">Voltar ao Início</a>
+      <a href="../../index.php" class="btn btn-warning">Voltar ao Início</a>
     </div>
     <br>
       <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4> Lista de Stands
-                <a href="createStand.php" class="btn btn-primary float-end">Adicionar Stand</a>
-              </h4>
+              <h4 class="lista"> Lista de Stands</h4>
+              <a href="createStand.php" class="btn btn-warning float-end">Adicionar Stand</a>
             </div>
-            <div class="card-body">
-              <table class="table table-bordered table-striped">
+            <div class="table-responsive">
+              <table class="table">
                 <thead>
                   <tr>
                     <th>ID</th>
@@ -70,7 +70,7 @@
                     <td><?=$stand['precisao']?></td>
                     <td><?=$stand['potencial']?></td>
                     <td>
-                      <a href="editStand.php?id=<?=$stand['id']?>" class="btn btn-success btn-sm">
+                      <a href="editStand.php?id=<?=$stand['id']?>" class="btn btn-edit btn-sm">
                          <span class="bi-pencil-fill"></span>&nbsp;Editar
                       </a>
                       <form action="../../controllers/crudController.php" method="POST" class="d-inline">
@@ -78,7 +78,7 @@
                                 type="submit" 
                                 name="delete_stand" 
                                 value="<?=$stand['id']?>" 
-                                class="btn btn-danger btn-sm">
+                                class="btn btn-delete btn-sm">
                             <span class="bi-trash3-fill"></span>&nbsp;Excluir
                         </button>
                       </form>
