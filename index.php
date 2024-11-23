@@ -15,7 +15,7 @@
     <div class="blur-overlay"></div>
 
     <div class="content">
-        <img src="views/imagens/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
+        <img src="views/pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
         <br>
 
         <a href="views/jogo.php" class="btn btn-success">Jogar</a> <br><br> 
