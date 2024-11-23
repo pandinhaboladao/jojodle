@@ -64,33 +64,6 @@ body {
     font-style: italic;
 }
 
-td {
-    padding: 10px;
-    text-align: center;
-    font-size: 18px; 
-    font-weight: bold; 
-    border-radius: 8px; 
-    border: 2px solid #ccc; 
-    background-color: rgba(0, 0, 0, 0.3); 
-    color: #E0E0E0; 
-    transition: all 0.3s ease; 
-}
-
-.correto {
-    background-color: #49885D; 
-    color: #301623;
-}
-
-.incorreto {
-    background-color: #952F58; 
-    color: #301623;
-}
-
-.parcial {
-    background-color: #D58C00; 
-    color: #301623;
-}
-
 /* Aplicando um leve desfoque */
 .blur-overlay {
     backdrop-filter: blur(4px); 
@@ -112,11 +85,12 @@ td {
 
 /* Estilo para o input de palpite */
 #stand_guess {
-    width: 300px; 
+    width: 400px; 
     height: 45px; 
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #f8f8f8; 
@@ -138,36 +112,6 @@ td {
     background: rgba(50, 50, 70, 0.8); 
     box-shadow: 0 0 15px #ff00ff; 
     border-color: #ff00ff;
-}
-
-
-/* Botão de envio*/
-.button-jojo {
-    padding: 12px 30px; 
-    font-size: 18px; 
-    font-weight: bold; 
-    text-transform: uppercase;
-    color: #f0e5ff; 
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
-    border: 2px solid #ff00ff; 
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.button-jojo:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8); 
-    border-color: #ff007f; 
-    color: #fff; 
-}
-
-.button-jojo:active {
-    background: #6a0dad; 
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); 
-    border-color: #ff007f; 
-    color: #e0d3f8; 
 }
 
 /* Estilo para o botão de reiniciar */
@@ -194,34 +138,6 @@ button.btn-danger:active {
     max-width: 300px; /* Tamanho máximo da largura */
     height: auto; /* Mantém a proporção */
     margin-bottom: 10px; /* Espaço abaixo da logo */
-}
-/* Estilos gerais para os botões */
-.btn-success {
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 12px;
-    border: 2px solid #ff00ff; /* Borda roxa */
-    color: #fff;
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
-    transition: all 0.3s ease;
-}
-
-/* Efeito de hover nos botões */
-.btn-success:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
-    border-color: #ff007f; /* Borda mais vibrante */
-}
-
-/* Efeito de clique nos botões */
-.btn-success:active {
-    background: #6a0dad; /* Cor roxa mais escura */
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-    border-color: #ff007f; /* Borda mais escura */
-    color: #e0d3f8; /* Texto mais claro */
 }
 
 .btn-warning {
@@ -280,3 +196,93 @@ button.btn-danger:active {
     color: #e0d3f8; /* Texto mais claro */
 }
 
+/* Estilo geral da tabela */
+.table {
+    width: 90%; /* Ajustando a largura para uma tabela mais centralizada */
+    max-width: 1200px; /* Máxima largura para não esticar muito em telas grandes */
+    border-collapse: collapse;
+    margin: 20px auto; /* Centraliza a tabela na tela */
+    font-family: "JoJoFont", sans-serif;
+    background-color: rgba(20, 20, 30, 0.95);
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+.table thead {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.table thead th {
+    padding: 12px 10px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Estilo das células */
+.table tbody td {
+    padding: 12px 15px; /* Espaçamento interno maior */
+    text-align: center; /* Alinha o texto ao centro */
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 0, 127, 0.3); /* Borda leve */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #E0E0E0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Classes para células corretas, incorretas e parciais */
+.table tbody td.correto {
+    background-color: #49885D;
+    color: #E0E0E0;
+    border: 2px solid #70b88f;
+}
+
+.table tbody td.incorreto {
+    background-color: #952F58;
+    color: #E0E0E0;
+    border: 2px solid #c96f8f;
+}
+
+.table tbody td.parcial {
+    background-color: #D58C00;
+    color: #E0E0E0;
+    border: 2px solid #ffc107;
+}
+
+/* Tooltip no estilo temático */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 999;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Compensa o 50% para centralizar */
+}
+
+/* Exibe a tooltip quando hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(100%); /* Centraliza horizontalmente e desloca para baixo */
+}

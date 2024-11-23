@@ -80,7 +80,6 @@ button[type="submit"] {
     padding: 12px 30px;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;
     color: #f0e5ff;
     background: linear-gradient(135deg, #6a0dad, #9b30b2);
     border: 2px solid #ff00ff;

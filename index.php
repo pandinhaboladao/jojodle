@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="views/CSS/style2.css">
+    <link rel="stylesheet" href="views/CSS/style.css">
 </head>
 <body>
 <br>
@@ -18,8 +18,9 @@
         <img src="views/pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
         <br>
 
-        <a href="views/jogo.php" class="btn btn-success">Jogar</a> <br><br> 
-        <a href="views/CRUD/view.php" class="btn btn-success">Visualizar (CRUD)</a>  
+        <a href="views/jogo.php" class="btn btn-warning">Jogar</a> <br><br> 
+        <a href="views/comojogar.php" class="btn btn-warning">Como jogar</a><br><br>
+        <a href="views/CRUD/view.php" class="btn btn-warning">Visualizar (CRUD)</a>  
     </div>
 </center>
 </body>

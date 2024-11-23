@@ -18,6 +18,10 @@
   </head>
   <body>
     <div class="container mt-4">
+    <div class="col-4">
+      <a href="../../index.php" class="btn btn-jojo btn-lg me-3">Voltar ao Início</a>
+    </div>
+    <br>
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -88,12 +92,6 @@
                  ?>
                 </tbody>
               </table>
-
-              
-              <div class="text-center mt-4">
-                <a href="../../index.php" class="btn btn-jojo btn-lg me-3">Voltar ao Início</a>
-                <a href="../jogo.php" class="btn btn-jojo btn-lg">Ir para o Jogo</a>
-              </div>
             </div>
           </div>
         </div>
