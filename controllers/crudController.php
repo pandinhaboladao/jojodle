@@ -53,7 +53,7 @@
         } else {
             $_SESSION['mensagem'] = 'Nenhuma alteração foi feita ou erro ao atualizar o Stand';
         }
-        header("Location: ../views/CRUD/editStand.php?id=$stand_id");
+        header("Location: ../views/CRUD/view.php?id=$stand_id");
         exit;
     }
 

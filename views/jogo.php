@@ -60,8 +60,10 @@
         <br><br>
 
         <!-- Botões para voltar ao índice e ir para o CRUD -->
-        <a href="../index.php" class="btn btn-secondary">Início</a>
+        <a href="../index.php" class="btn btn-warning">Início</a>
         <a href="CRUD/view.php" class="btn btn-warning">Visualizar CRUD</a>
+
+        <br><br><br><br>
         
     </div>
 </center>
