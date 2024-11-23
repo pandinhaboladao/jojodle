@@ -1,0 +1,123 @@
+/* Estilo geral da página */
+body {
+    background-image: url('https://images5.alphacoders.com/433/thumb-1920-433561.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(20, 20, 30, 0.8); /* Fundo escuro para contraste */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+    margin-top: 50px;
+}
+
+/* Cabeçalho do Card */
+.card-header {
+    background-color: #6A0DAD; /* Roxo vibrante */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo do botão "Voltar" */
+.card-header .btn-danger {
+    background-color: #952F58; /* Cor do botão de voltar */
+    border: 1px solid #ff007f; /* Borda rosada */
+}
+
+.card-header .btn-danger:hover {
+    background-color: #D58C00;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+/* Card Body */
+.card-body {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Estilo para os inputs */
+.form-control {
+    background-color: rgba(20, 20, 30, 0.8);
+    color: #fff;
+    border: 2px solid #8000ff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px rgba(128, 0, 255, 0.5);
+}
+
+.form-control:focus {
+    background-color: rgba(50, 50, 70, 0.8);
+    box-shadow: 0 0 10px #ff00ff;
+    border-color: #ff00ff;
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    font-weight: bold;
+    color: #d1c4e9;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Botão de salvar */
+button[type="submit"] {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f0e5ff;
+    background: linear-gradient(135deg, #6a0dad, #9b30b2);
+    border: 2px solid #ff00ff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #9b30b2, #ff00ff);
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+    border-color: #ff007f;
+    color: #fff;
+}
+
+button[type="submit"]:active {
+    background: #6a0dad;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    border-color: #ff007f;
+    color: #e0d3f8;
+}
+
+/* Efeitos de hover e animação para inputs */
+input[type="text"]:hover, input[type="text"]:focus {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Melhorando a legibilidade com mais contraste */
+h4 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Margem para o botão de salvar */
+.mb-3 button {
+    margin-top: 20px;
+}

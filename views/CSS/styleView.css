@@ -1,0 +1,108 @@
+body {
+    background-image: url('https://images5.alphacoders.com/433/thumb-1920-433561.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* Estilo dos botões de navegação com o tema JoJo */
+.btn-jojo {
+    padding: 12px 30px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    color: #f0e5ff; 
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
+    border: 2px solid #ff00ff; 
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-jojo:hover {
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8); 
+    border-color: #ff007f; 
+    color: #fff; 
+}
+
+.btn-jojo:active {
+    background: #6a0dad; 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); 
+    border-color: #ff007f; 
+    color: #e0d3f8; 
+}
+/* Estilo para a tabela */
+.table-bordered {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro para a tabela */
+    color: #E0E0E0; /* Texto claro */
+    border-radius: 8px;
+    border: 2px solid #8000ff; /* Borda roxa */
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5); /* Sombra vibrante */
+}
+
+/* Estilo para os cabeçalhos da tabela */
+th {
+    background-color: rgba(50, 50, 70, 0.8); /* Fundo escuro para cabeçalhos */
+    color: #ff00ff; /* Cor vibrante para o texto */
+    font-family: "JoJoFont", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 10px;
+}
+
+/* Estilo para as células da tabela */
+td {
+    font-size: 16px; /* Ajuste do tamanho da fonte */
+    font-family: "JoJoFont", sans-serif;
+    font-weight: normal;
+    padding: 10px 15px;
+    text-align: center;
+    border: 2px solid #8000ff; /* Borda roxa */
+    background-color: rgba(20, 20, 30, 0.9); /* Fundo escuro nas células */
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para as imagens dos stands */
+td img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    border: 2px solid #ff00ff;
+}
+
+/* Estilo para a linha de "Nenhum stand encontrado" */
+.table tbody td {
+    text-align: center;
+    font-style: italic;
+    color: #ff007f;
+}
+
+/* Estilo para o botão de adicionar */
+.btn-primary {
+    background-color: #6a0dad; /* Cor roxa */
+    border-color: #9b30b2; /* Borda mais clara */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover no botão de adicionar */
+.btn-primary:hover {
+    background-color: #9b30b2; /* Cor roxa mais clara */
+    border-color: #ff00ff; /* Borda vibrante */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+/* Efeito de clique no botão de adicionar */
+.btn-primary:active {
+    background-color: #8000ff; /* Cor mais escura */
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+    border-color: #ff007f;
+}
