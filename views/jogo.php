@@ -15,7 +15,8 @@
     <div class="blur-overlay"></div>
 
     <div class="content">
-        <img src="pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
+
+        <img src="views/pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
         <br><br>
 
         <!-- Mostrando a resposta -->
