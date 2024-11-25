@@ -9,7 +9,6 @@
             $this->consultas = new Consultas();
         }
         
-
         public function lista() {
             if (isset($_GET["query"])) {
                 $query = $_GET["query"] . '%'; //Pegando valor da query/lista com o % para usar o like
