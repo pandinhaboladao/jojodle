@@ -5,7 +5,6 @@ body {
     background-position: center;
 }
 
-/* Aplicando um leve desfoque */
 .blur-overlay {
     backdrop-filter: blur(4px); 
     background-color: rgba(0, 0, 0, 0.4); 
@@ -23,55 +22,53 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 12px;
-    border: 2px solid #ff00ff; /* Borda roxa */
+    border: 2px solid #ff00ff; 
     color: #fff;
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
     transition: all 0.3s ease;
 }
 
-/* Efeito de hover nos botões */
 .btn-warning:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
-    border-color: #ff007f; /* Borda mais vibrante */
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); 
+    border-color: #ff007f; 
 }
 
-/* Efeito de clique nos botões */
 .btn-warning:active {
-    background: #6a0dad; /* Cor roxa mais escura */
+    background: #6a0dad; 
     box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-    border-color: #ff007f; /* Borda mais escura */
-    color: #e0d3f8; /* Texto mais claro */
+    border-color: #ff007f; 
+    color: #e0d3f8; 
 }
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh; /* Garante que o card fique centralizado verticalmente */
+    min-height: 90vh;  
 }
 
 .card-box {
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
     color: #fff;
     font-size: 25px;
-    padding: 50px 60px; /* Aumenta o espaçamento interno */
+    padding: 50px 60px; 
     border-radius: 20px;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    max-width: 1000px; /* Largura maior */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); 
+    max-width: 1000px; 
     text-align: justify;
     font-family: 'Arial', sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-box:hover {
-    transform: translateY(-8px); /* Animação ao passar o mouse */
+    transform: translateY(-8px); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card-box h2 {
-    font-size: 40px; /* Aumenta o tamanho do título */
+    font-size: 40px; 
     color: #D58C00;
     font-weight: bold;
     margin-bottom: 30px;
@@ -87,12 +84,12 @@ body {
 }
 
 .card-box ul {
-    padding-left: 20px; /* Adiciona recuo na lista */
+    padding-left: 20px; 
     list-style: none;
 }
 
 .card-box li {
-    margin-bottom: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 10px; 
 }   
 
 .verde {

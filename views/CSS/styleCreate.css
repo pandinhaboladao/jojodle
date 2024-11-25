@@ -1,4 +1,4 @@
-/* Estilo geral da página */
+
 body {
     background-image: url('https://images5.alphacoders.com/433/thumb-1920-433561.png');
     background-size: cover;
@@ -8,7 +8,7 @@ body {
     color: white;
 }
 
-/* Aplicando um leve desfoque */
+
 .blur-overlay {
     backdrop-filter: blur(4px); 
     background-color: rgba(0, 0, 0, 0.4); 
@@ -20,20 +20,20 @@ body {
     z-index: -1; 
 }
 
-/* Container principal */
+
 .container {
     position: relative;
     z-index: 2;
-    background-color: rgba(20, 20, 30, 0.8); /* Fundo escuro para contraste */
+    background-color: rgba(20, 20, 30, 0.8); 
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); 
     margin-top: 50px;
 }
 
-/* Cabeçalho do Card */
+
 .card-header {
-    background-color: #6A0DAD; /* Roxo vibrante */
+    background-color: #6A0DAD; 
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -41,10 +41,10 @@ body {
     letter-spacing: 1px;
 }
 
-/* Estilo do botão "Voltar" */
+
 .card-header .btn-danger {
-    background-color: #952F58; /* Cor do botão de voltar */
-    border: 1px solid #ff007f; /* Borda rosada */
+    background-color: #952F58; 
+    border: 1px solid #ff007f; 
 }
 
 .card-header .btn-danger:hover {
@@ -52,14 +52,13 @@ body {
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
 }
 
-/* Card Body */
 .card-body {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Estilo para os inputs */
+
 .form-control {
     background-color: rgba(20, 20, 30, 0.8);
     color: #fff;
@@ -79,7 +78,7 @@ body {
     border-color: #ff00ff;
 }
 
-/* Estilo para os rótulos (labels) */
+
 label {
     font-weight: bold;
     color: #d1c4e9;
@@ -88,7 +87,7 @@ label {
     display: block;
 }
 
-/* Botão de salvar */
+
 button[type="submit"] {
     padding: 12px 30px;
     font-size: 18px;
@@ -116,19 +115,19 @@ button[type="submit"]:active {
     color: #e0d3f8;
 }
 
-/* Efeitos de hover e animação para inputs */
+
 input[type="text"]:hover, input[type="text"]:focus {
     transform: scale(1.02);
     transition: transform 0.3s ease;
 }
 
-/* Melhorando a legibilidade com mais contraste */
+
 h4 {
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Margem para o botão de salvar */
+
 .mb-3 button {
     margin-top: 20px;
 }

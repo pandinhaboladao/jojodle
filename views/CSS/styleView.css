@@ -8,10 +8,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Garante preenchimento total */
+    min-height: 100vh; 
 }
 
-/* Aplicando um leve desfoque */
+
 .blur-overlay {
     backdrop-filter: blur(4px); 
     background-color: rgba(0, 0, 0, 0.4); 
@@ -23,57 +23,56 @@ body {
     z-index: -1; 
 }
 
-/* Container centralizado */
+
 .container {
-    width: 95%; /* Largura adaptável */
-    max-width: 1600px; /* Limita a largura máxima */
+    width: 95%; 
+    max-width: 1600px; 
     margin: auto;
-    background-color: rgba(20, 20, 30, 0.95); /* Fundo igual ao da tabela */
+    background-color: rgba(20, 20, 30, 0.95); 
     padding: 20px;
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+    border-radius: 12px; 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); 
 }
 
-/* Card */
+
 .card {
-    background-color: rgba(20, 20, 30, 0.95); /* Mesma cor da tabela */
-    border: none; /* Remove bordas do card */
+    background-color: rgba(20, 20, 30, 0.95); 
+    border: none; 
 }
 
-/* Card-header */
 .card-header {
-    background-color: rgba(20, 20, 30, 0.95); /* Mesma cor da tabela */
+    background-color: rgba(20, 20, 30, 0.95);
     padding: 15px;
-    border-bottom: 2px solid #8000ff; /* Linha roxa */
+    border-bottom: 2px solid #8000ff; 
 }
 
 h4 {
     font-size: 30px;
-    color: #fff; /* Define o texto em preto */
+    color: #fff; 
     font-weight: bold;
     text-align: 50%;
 }
 
-/* Estilo geral da tabela */
+
 .table {
-    width: 90%; /* Largura ajustável */
-    max-width: 1200px; /* Máxima largura */
+    width: 90%; 
+    max-width: 1200px; 
     border-collapse: collapse;
-    margin: 20px auto; /* Centraliza na tela */
+    margin: 20px auto; 
     font-family: "JoJoFont", sans-serif;
     background-color: rgba(20, 20, 30, 0.95);
     border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); 
     overflow: hidden;
 }
 
-/* Torna a tabela responsiva */
+
 .table-responsive {
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    margin: 0 auto; /* Centraliza o container */
+    overflow-x: auto; 
+    margin: 0 auto; 
 }
 
-/* Cabeçalho da tabela */
+
 .table thead {
     background: rgba(0, 0, 0, 0.3);
     color: rgba(0, 0, 0, 0.3);
@@ -88,20 +87,20 @@ h4 {
     border: none;
 }
 
-/* Estilo das células */
+
 .table tbody td {
     padding: 8px 10px;
     text-align: center;
     vertical-align: middle;
-    font-size: 14px; /* Fonte menor para caber mais dados */
+    font-size: 14px; 
     font-weight: bold;
-    border: 1px solid rgba(255, 0, 127, 0.3); /* Borda */
+    border: 1px solid rgba(255, 0, 127, 0.3);
     background-color: rgba(0, 0, 0, 0.3);
     color: #E0E0E0;
     transition: background-color 0.3s ease, color 0.3s ease;    
 }
 
-/* Reduz as imagens na tabela */
+
 .table tbody td img {
     width: 50px;
     height: 50px;
@@ -109,10 +108,10 @@ h4 {
     border: 2px solid #ff00ff;
 }
 
-/* Estilo para os cabeçalhos da tabela */
+
 th {
-    background-color: rgba(50, 50, 70, 0.8); /* Fundo escuro para cabeçalhos */
-    color: #ff00ff; /* Cor vibrante para o texto */
+    background-color: rgba(50, 50, 70, 0.8); 
+    color: #ff00ff; 
     font-family: "JoJoFont", sans-serif;
     font-size: 18px;
     text-transform: uppercase;
@@ -120,21 +119,21 @@ th {
     padding: 15px 10px;
 }
 
-/* Estilo para as células da tabela */
+
 td {
-    font-size: 16px; /* Ajuste do tamanho da fonte */
+    font-size: 16px; 
     font-family: "JoJoFont", sans-serif;
     font-weight: normal;
     padding: 10px 15px;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid #8000ff; /* Borda roxa */
-    background-color: rgba(20, 20, 30, 0.9); /* Fundo escuro nas células */
+    border: 2px solid #8000ff; 
+    background-color: rgba(20, 20, 30, 0.9); 
     color: #e0e0e0;
     transition: background-color 0.3s ease;
 }
 
-/* Estilo para as imagens dos stands */
+
 td img {
     width: 70px;
     height: 70px;
@@ -148,54 +147,54 @@ td img {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 12px;
-    border: 2px solid #ff00ff; /* Borda roxa */
+    border: 2px solid #ff00ff; 
     color: #fff;
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
     transition: all 0.3s ease;
 }
 
-/* Efeito de hover nos botões */
+
 .btn-warning:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
-    border-color: #ff007f; /* Borda mais vibrante */
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); 
+    border-color: #ff007f; 
 }
 
-/* Efeito de clique nos botões */
+
 .btn-warning:active {
-    background: #6a0dad; /* Cor roxa mais escura */
+    background: #6a0dad; 
     box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-    border-color: #ff007f; /* Borda mais escura */
-    color: #e0d3f8; /* Texto mais claro */
+    border-color: #ff007f; 
+    color: #e0d3f8; 
 }
 
-/* Estilo para o botão de edição */
+
 .btn-edit {
     background-color: #49885D;
-    color: #fff; /* Texto branco */
-    border: none; /* Sem borda */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+    color: #fff; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
 }
 
 .btn-edit:hover {
     background-color: #70b88f;
-    color: #f8f9fa; /* Texto branco mais claro */
+    color: #f8f9fa; 
 }
 
-/* Estilo para o botão de exclusão */
+
 .btn-delete {
     background-color: #952F58;
-    color: #fff; /* Texto branco */
-    border: none; /* Sem borda */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+    color: #fff; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
 }
 
 .btn-delete:hover {
     background-color: #c96f8f;
-    color: #f8f9fa; /* Texto branco mais claro */
+    color: #f8f9fa; 
 }

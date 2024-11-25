@@ -5,22 +5,22 @@ body {
     background-position: center;
 }
 
-/* Container das sugestões com estilo inspirado em JoJo */
+
 .listaStands {
     border: 2px solid #8000ff;
     max-height: 250px;
     overflow-y: auto;
     background-color: rgba(20, 20, 30, 0.95);
     position: absolute;
-    width: 80%; /* Um pouco menor para centralização */
-    left: 50%; /* Centraliza horizontalmente */
+    width: 80%; 
+    left: 50%; 
     transform: translateX(-50%);
     z-index: 10;
     border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); 
 }
 
-/* Estilo de cada sugestão com visual de JoJo */
+
 .stand-sugestao {
     display: flex;
     align-items: center;
@@ -32,19 +32,19 @@ body {
 
 .stand-sugestao:hover {
     background-color: rgba(128, 0, 255, 0.4);
-    transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.03); 
 }
 
-/* Imagem do stand com dimensões reduzidas */
+
 .stand-imagem-lista {
-    width: 40px; /* Dimensões menores */
+    width: 40px; 
     height: 40px;
     margin-right: 12px;
     border-radius: 6px;
-    border: 2px solid #ff007f; /* Borda vibrante */
+    border: 2px solid #ff007f; 
 }
 
-/* Texto do nome do stand com fonte e cor temática */
+
 .stand-nome {
     font-size: 16px;
     font-family: "JoJoFont", sans-serif; 
@@ -56,7 +56,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Ajuste para mensagem de "Nenhuma sugestão encontrada" */
+
 .listaStands p {
     padding: 10px;
     text-align: center;
@@ -64,7 +64,7 @@ body {
     font-style: italic;
 }
 
-/* Aplicando um leve desfoque */
+
 .blur-overlay {
     backdrop-filter: blur(4px); 
     background-color: rgba(0, 0, 0, 0.4); 
@@ -76,14 +76,14 @@ body {
     z-index: -1; 
 }
 
-/* Ajuste do conteúdo para legibilidade sobre o background */
+
 .content {
     position: relative;
     z-index: 1; 
     color: white; 
 }
 
-/* Estilo para o input de palpite */
+
 #stand_guess {
     width: 400px; 
     height: 45px; 
@@ -114,7 +114,7 @@ body {
     border-color: #ff00ff;
 }
 
-/* Estilo para o botão de reiniciar */
+
 button.btn-danger {
     background-color: #57508F; 
     border-color: #E15FB6; 
@@ -133,11 +133,11 @@ button.btn-danger:active {
     border-color: #d32f2f;
 }
 
-/* Estilo da logo */
+
 .logo-img {
-    max-width: 300px; /* Tamanho máximo da largura */
-    height: auto; /* Mantém a proporção */
-    margin-bottom: 10px; /* Espaço abaixo da logo */
+    max-width: 300px; 
+    height: auto; 
+    margin-bottom: 10px; 
 }
 
 .btn-warning {
@@ -146,26 +146,26 @@ button.btn-danger:active {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 12px;
-    border: 2px solid #ff00ff; /* Borda roxa */
+    border: 2px solid #ff00ff; 
     color: #fff;
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
     transition: all 0.3s ease;
 }
 
 /* Efeito de hover nos botões */
 .btn-warning:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
-    border-color: #ff007f; /* Borda mais vibrante */
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); 
+    border-color: #ff007f; 
 }
 
-/* Efeito de clique nos botões */
+
 .btn-warning:active {
-    background: #6a0dad; /* Cor roxa mais escura */
+    background: #6a0dad; 
     box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-    border-color: #ff007f; /* Borda mais escura */
-    color: #e0d3f8; /* Texto mais claro */
+    border-color: #ff007f; 
+    color: #e0d3f8; 
 }
 
 .btn-secondary {
@@ -174,48 +174,48 @@ button.btn-danger:active {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 12px;
-    border: 2px solid #ff00ff; /* Borda roxa */
+    border: 2px solid #ff00ff; 
     color: #fff;
-    background: linear-gradient(135deg, #6a0dad, #9b30b2); /* Gradiente roxo */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Sombra vibrante */
+    background: linear-gradient(135deg, #6a0dad, #9b30b2); 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
     transition: all 0.3s ease;
 }
 
-/* Efeito de hover nos botões */
+
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #9b30b2, #ff00ff); /* Gradiente mais claro no hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Sombra mais forte */
-    border-color: #ff007f; /* Borda mais vibrante */
+    background: linear-gradient(135deg, #9b30b2, #ff00ff); 
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); 
+    border-color: #ff007f; 
 }
 
-/* Efeito de clique nos botões */
+
 .btn-secondary:active {
-    background: #6a0dad; /* Cor roxa mais escura */
+    background: #6a0dad; 
     box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-    border-color: #ff007f; /* Borda mais escura */
-    color: #e0d3f8; /* Texto mais claro */
+    border-color: #ff007f; 
+    color: #e0d3f8; 
 }
 
-/* Estilo geral da tabela */
+
 .table {
-    width: 90%; /* Ajustando a largura para uma tabela mais centralizada */
-    max-width: 1200px; /* Máxima largura para não esticar muito em telas grandes */
+    width: 90%; 
+    max-width: 1200px; 
     border-collapse: collapse;
-    margin: 20px auto; /* Centraliza a tabela na tela */
+    margin: 20px auto; 
     font-family: "JoJoFont", sans-serif;
     background-color: rgba(20, 20, 30, 0.95);
     border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); 
     overflow: hidden;
 }
 
-/* Cabeçalho da tabela */
+
 .table thead {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    text-align: center; /* Alinha o texto ao centro */
+    text-align: center; 
 }
 
 .table thead th {
@@ -224,20 +224,20 @@ button.btn-danger:active {
     border: none;
 }
 
-/* Estilo das células */
+
 .table tbody td {
-    padding: 12px 15px; /* Espaçamento interno maior */
-    text-align: center; /* Alinha o texto ao centro */
+    padding: 12px 15px;
+    text-align: center; 
     vertical-align: middle;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid rgba(255, 0, 127, 0.3); /* Borda leve */
+    border: 1px solid rgba(255, 0, 127, 0.3); 
     background-color: rgba(0, 0, 0, 0.3);
     color: #E0E0E0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Classes para células corretas, incorretas e parciais */
+
 .table tbody td.correto {
     background-color: #49885D;
     color: #E0E0E0;
@@ -256,7 +256,7 @@ button.btn-danger:active {
     border: 2px solid #ffc107;
 }
 
-/* Tooltip no estilo temático */
+
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -276,13 +276,13 @@ button.btn-danger:active {
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Compensa o 50% para centralizar */
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
-/* Exibe a tooltip quando hover */
+
 .tooltip-container:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-50%) translateY(100%); /* Centraliza horizontalmente e desloca para baixo */
+    transform: translateX(-50%) translateY(100%); 
 }
