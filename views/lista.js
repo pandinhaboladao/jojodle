@@ -1,20 +1,19 @@
+//Busca uma lista de stands que começam com uma letra específica e se atualiza 
 function mostrarStands(query) {
+    //Se o campo tá vazio, não mostra nenhuma lista
     if (query.length === 0) {
         document.getElementById("lista").innerHTML = "";
         return;
     }
 
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            document.getElementById("lista").innerHTML = xhr.responseText;
-        }
-    };
-    xhr.open("GET", "../controllers/lista.php?query=" + encodeURIComponent(query), true);
-    xhr.send();
+    //Usa o código do lista.php
+    fetch("../controllers/lista.php?query=" + encodeURIComponent(query))
+        .then(response => response.text()) //Converte para texto
+        .then(data => document.getElementById("lista").innerHTML = data); //Atualiza a lista
 }
 
+//Preenche o campo com o stand que eu clicar na lista e limpa a lista
 function selecionarStand(nome) {
-    document.getElementById("stand_guess").value = nome; // Preenche o campo com o nome selecionado
-    document.getElementById("lista").innerHTML = ""; // Limpa a lista de sugestões
+    document.getElementById("stand_guess").value = nome; //Preecnhe o campo
+    document.getElementById("lista").innerHTML = ""; //Limpa
 }

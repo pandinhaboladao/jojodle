@@ -4,7 +4,7 @@
 
     $crudConsultas = new CrudConsultas();
 
-    // Criar Stand
+    //Criar Stand
     if (isset($_POST['create_stand'])) {
         $dados = [
             'imagem' => trim($_POST['imagem']),
@@ -30,7 +30,7 @@
         exit;
     }
 
-    // Atualizar Stand
+    //Atualizar Stand
     if (isset($_POST['update_stand'])) {
         $stand_id = $_POST['stand_id'];
         $dados = [
@@ -57,19 +57,16 @@
         exit;
     }
 
-    // Deletar Stand
+    //Deletar Stand
     if (isset($_POST['delete_stand'])) {
-        // Obtém o ID do stand
         $stand_id = $_POST['delete_stand'];
 
-        // Deleta o stand usando a função
         if ($crudConsultas->crudDelete($stand_id)) {
             $_SESSION['mensagem'] = 'Stand deletado com sucesso';
         } else {
             $_SESSION['mensagem'] = 'Erro ao deletar o Stand';
         }
 
-        // Redireciona para a página de visualização
         header('Location: ../views/CRUD/view.php');
         exit;
     }

@@ -1,27 +1,26 @@
 <?php
     session_start();
+    require_once "../models/database.php";
+    require_once "../controllers/funcoes.php";
 
-    require_once "../models/database.php"; // Conexão com o DB
-    require_once "../controllers/funcoes.php"; // Classe Sorteio
-
-    // Função para lidar com o sorteio
+    //Preparando o sorteio
     function sorteio() {
         $sorteio = new Funcoes();
-        $sorteio->sorteio(); // Sorteia o stand e o armazena na sessão
+        $sorteio->sorteio();
     }
 
-    // Função para lidar com o palpite do jogador
+    //Preparando o guess para verificar o palpite
     function guess() {
         $guess = new Funcoes();
-        $guess->guess(); // Verifica o palpite
+        $guess->guess();
     }
 
-    // Se o sorteio ainda não foi feito, realiza o sorteio
+    //Chamando apenas se ainda não foi realizado o sorteio
     if (!isset($_SESSION["stand_alvo"])) {
         sorteio();
     }
 
-    // Se o formulário for enviado, processa o palpite
+    //Chamando apenas se foi enviado um formulário
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_POST["stand_guess"])) {
             guess();

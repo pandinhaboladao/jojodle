@@ -22,12 +22,12 @@
         <img src="pictures/jojodle_logo.png" alt="Jojodle Logo" class="logo-img">
         <br><br>
 
-        <!-- Mostrando a resposta -->
+        <!-- Pegando o stand alvo e a resposta-->
         <?php
             session_start();
             if (isset($_SESSION["stand_alvo"])) {
                 $stand_alvo = $_SESSION["stand_alvo"];
-                // echo "<p>Resposta: " . htmlspecialchars($stand_alvo["nome"]) . "</p>";
+                //echo "<p>Resposta: " . htmlspecialchars($stand_alvo["nome"]) . "</p>";
             }
         ?>
 
@@ -35,7 +35,7 @@
             <div class="col-4">
                 <input type="text" class="form-control" placeholder="Escreva o nome do stand" name="stand_guess" id="stand_guess" onkeyup="mostrarStands(this.value)">
             </div>
-            <div id="lista" class="listaStands"></div> <!-- Div para exibir as sugestões -->
+            <div id="lista" class="listaStands"></div> <!-- Exibe a lista de stands -->
             
             <br>
             <button type="submit" class="btn btn-warning">Enviar</button>
@@ -44,13 +44,12 @@
 
             <table class="table">
                 <?php
-                    // Verifica se há uma mensagem de sucesso ou erro
+                    //Mostra a mensagem do acerto ou erro do guess
                     if (isset($_GET['message'])) {
                         echo "<h3>" . $_GET['message'] . "</h3>";
                     }
-                    
                 
-                    // Exibe as dicas, se houver
+                    //Dicas
                     require_once "../controllers/funcoes.php";
                     $dica = new Funcoes();
                     $dica->dica();

@@ -29,7 +29,7 @@ class CrudConsultas {
         $result = $stmt->get_result();
         $stmt->close();
         
-        return $result->fetch_assoc(); // Retorna o stand ou null se não encontrado
+        return $result->fetch_assoc();
     }    
 
     public function crudCreate($dados) {

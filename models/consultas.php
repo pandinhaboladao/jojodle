@@ -4,12 +4,20 @@
     class Consultas {
         private $conn;
 
+        //Se conectando com o banco de dados
         public function __construct() {
             $database = new Database();
             $this->conn = $database->getConnection();
         }
 
-        // Retorna um stand pelo nome
+        //Retorna um stand aleatório
+        public function consultaSorteio() {
+            $sql = "SELECT * FROM stands WHERE nome='Star Platinum'";
+            $result = $this->conn->query($sql);
+            return $result->fetch_assoc();
+        }
+
+        //Retorna um stand pelo nome, usado no guess para comparar o palpite do usuário com stands do db
         public function consultaGuess($nome) {
             $sql = "SELECT * FROM stands WHERE nome = ?";
             $stmt = $this->conn->prepare($sql);
@@ -17,10 +25,21 @@
             $stmt->execute();
             $result = $stmt->get_result();
             $stmt->close();
-            return $result->fetch_assoc(); // Retorna o primeiro resultado encontrado
+            return $result->fetch_assoc();
         }
 
-        // Retorna todos os stands que correspondem a uma query
+        //Retorna todos os atributos do stand que o usuário palpitou
+        public function consultaDica($nome) {
+            $sql = "SELECT imagem, nome, parte, habilidade, forma, especial, poder, velocidade, alcance, resistencia, precisao, potencial FROM stands WHERE nome = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("s", $nome);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $stmt->close();
+            return $result->fetch_assoc();
+        }
+
+        //Retorna todos os stands que começam com uma letra em específico, usada na lista da pesquisa
         public function consultaLista($query) {
             $sql = "SELECT nome, imagem FROM stands WHERE nome LIKE ?";
             $stmt = $this->conn->prepare($sql);
@@ -34,23 +53,5 @@
             }
             $stmt->close();
             return $stands;
-        }
-
-        // Retorna atributos de um stand para dicas
-        public function consultaDica($nome) {
-            $sql = "SELECT imagem, nome, parte, habilidade, forma, especial, poder, velocidade, alcance, resistencia, precisao, potencial FROM stands WHERE nome = ?";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param("s", $nome);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            $stmt->close();
-            return $result->fetch_assoc(); // Retorna o primeiro resultado encontrado
-        }
-
-        // Retorna um stand aleatório
-        public function consultaSorteio() {
-            $sql = "SELECT * FROM stands ORDER BY RAND() LIMIT 1";
-            $result = $this->conn->query($sql);
-            return $result->fetch_assoc(); // Retorna o primeiro resultado encontrado
         }
     }

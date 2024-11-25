@@ -3,38 +3,40 @@
 
     class Lista {
         private $consultas;
-    
+        
+        //Se conectando com o banco de dados
         public function __construct() {
             $this->consultas = new Consultas();
         }
-    
-        public function lista() {
+        
 
+        public function lista() {
             if (isset($_GET["query"])) {
-                $query = $_GET["query"] . '%';
+                $query = $_GET["query"] . '%'; //Pegando valor da query/lista com o % para usar o like
+                //Pegando a lista de stands que começam com a letra da query
                 $stands = $this->consultas->consultaLista($query);
     
-                if ($stands) {
+                if ($stands) { //Verificando se existe algum stand com essa letra
                     foreach ($stands as $stand) {
-                        // Sanitize and prepare variables
+                        //Pegando o nome e a imagem do stand
                         $nome = htmlspecialchars($stand["nome"]);
-                        $imagem = htmlspecialchars($stand["imagem"]); // URL da imagem do stand
+                        $imagem = htmlspecialchars($stand["imagem"]);
     
-                        // Renderizando o stand com imagem
+                        //Mostrando
                         echo "<div class='stand-sugestao' onclick='selecionarStand(\"$nome\")'>";
-                        echo "<img src='$imagem' alt='$nome' class='stand-imagem-lista'>"; // Exibe a imagem
-                        echo "<span class='stand-nome'>$nome</span>"; // Exibe o nome
+                        echo "<img src='$imagem' alt='$nome' class='stand-imagem-lista'>"; //Imagem
+                        echo "<span class='stand-nome'>$nome</span>"; //Nome
                         echo "</div>";
                     }
                 } else {
                     echo "<p>Nenhuma sugestão encontrada</p>";
                 }
             } else {
-                echo "Nenhuma consulta recebida"; // Verifica se a query foi passada
+                echo "Nenhuma consulta recebida";
             }
         }
     }
     
-    // Cria uma instância e chama a função
+    //Chamando a função
     $lista = new Lista();
     $lista->lista();
