@@ -12,7 +12,7 @@
 
         //Retorna um stand aleatório
         public function consultaSorteio() {
-            $sql = "SELECT * FROM stands WHERE nome='Star Platinum'";
+            $sql = "SELECT * FROM stands ORDER BY RAND() LIMIT 1";
             $result = $this->conn->query($sql);
             return $result->fetch_assoc();
         }
